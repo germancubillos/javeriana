@@ -5,8 +5,8 @@ El siguiente proyecto pretende modelar e implementar una solución de arquitectu
 
 
 # INDICE
-1. [ContexTO](#CONTEXTO)
-2. [Arquitectura de Solución](#ARQUITECTURA_DE_SOLUCION)
+1. [Contexto](#CONTEXTO)
+2. [Arquitectura de Solución](#ARQUITECTURA_DE_SOLUCIÓN)
 3. [Estilo y uso de Servicios](#estilo-y-uso-de-servicios)
 4. [Manejo de Contratos, esquemas y políticas](#Manejo-de-Contratos,-esquemas-y-políticas)
 
