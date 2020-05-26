@@ -1,7 +1,8 @@
 # EAES_Modelado y Validación de Arqitectura
 ### Taller 4 - Banco ABC
+<p style='text-align: justify;'>El siguiente proyecto pretende modelar e implementar una solución de arquitectura utilizando una aproximación orientada a servicios utilizando los principios de diseño de servicios, diseño de patrones y estrategias para la construcción de arquitectura orientada a microservicios.</p>
 
-El siguiente proyecto pretende modelar e implementar una solución de arquitectura utilizando una aproximación orientada a servicios utilizando los principios de diseño de servicios, diseño de patrones y estrategias para la construcción de arquitectura orientada a microservicios.
+
 
 ## Indice
 1. [Contexto](#Contexto )
