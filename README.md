@@ -33,21 +33,17 @@ La solución planteada está principalmente basada sobre el estilo arquitectural
 
 Los servicios se comunican entre sí a través de APIs bien definidas. A continuación, se detallan los patrones complementarios en los que se soporta la solución: 
 
--	API Gateway : Se realiza la implementación de un API Gateway con Apache Camel sobre sprint boot. Esta API permite tener un único punto de acceso a los diferentes microservicios expuestos por el Banco ABC. Allí se expone una puerta de enlace para cada uno de los microservicios que se tienen configurados actualmente y no se cuenta con ninguna lógica de negocio.
+*-	API Gateway:* Se realiza la implementación de un API Gateway con Apache Camel sobre sprint boot. Esta API permite tener un único punto de acceso a los diferentes microservicios expuestos por el Banco ABC. Allí se expone una puerta de enlace para cada uno de los microservicios que se tienen configurados actualmente y no se cuenta con ninguna lógica de negocio.
 
+*-	API Composition:* Este patrón implementa una operación de consulta invocando los servicios que poseen los datos y combinando sus resultados. Allí se tienen dos tipos de participantes, un compositor el cual implementa la operación de consulta y un proveedor quien es el que posee algunos de los datos que devuelve la consulta. Esto permite realizar la composición por orquestación de los diferentes microservicios/servicios legados que se requieren para realizar las operaciones de consulta de saldo y pago de servicios y así solventar la necesidad de gestionar diversos proveedores sin impactar el sistema y su disponibilidad.
 
+*-	Intermediate Routing:* Este patrón permite realizar el enrutamiento de mensajes a otros servicios o legados, en la solución que se diseña aquí se implementa bajo la funcionalidad de Content-Based Routing, que, en esencia, realizar el enrutamiento de los mensajes basados en su contenido, como por ejemplo el id de la referencia de pago. Puede ser utilizado para modelar procesos de negocio complejos y proporcionar una forma eficiente de recomponer los servicios sobre la ejecución.
 
+*-	Decoupled Contract:*  Este patrón permite desacoplar el contrato del servicio de su implementación, permitiendo así que el servicio pueda evolucionar sin afectar directamente a los consumidores. Para esto los contratos se definieron bajo el principio de contrato primero.
 
+*-	Data Model Transformation:* La lógica de transformación de modelo de datos se puede introducir para llevar a cabo la conversión en tiempo de ejecución de datos, de modo que estos se ajusten a un modelo de datos, pueden ser reestructurados para cumplir a un modelo de datos diferente. Esto se extiende un marco de mensajería no estandarizada lo que le permite superar dinámicamente disparidad entre los esquemas utilizados por un contrato de servicio y los mensajes transmitidos a ese contrato.
 
--	API Composition : Este patrón implementa una operación de consulta invocando los servicios que poseen los datos y combinando sus resultados. Allí se tienen dos tipos de participantes, un compositor el cual implementa la operación de consulta y un proveedor quien es el que posee algunos de los datos que devuelve la consulta. Esto permite realizar la composición por orquestación de los diferentes microservicios/servicios legados que se requieren para realizar las operaciones de consulta de saldo y pago de servicios y así solventar la necesidad de gestionar diversos proveedores sin impactar el sistema y su disponibilidad.
-
--	Intermediate Routing : Este patrón permite realizar el enrutamiento de mensajes a otros servicios o legados, en la solución que se diseña aquí se implementa bajo la funcionalidad de Content-Based Routing, que, en esencia, realizar el enrutamiento de los mensajes basados en su contenido, como por ejemplo el id de la referencia de pago. Puede ser utilizado para modelar procesos de negocio complejos y proporcionar una forma eficiente de recomponer los servicios sobre la ejecución.
-
--	Decoupled Contract :  Este patrón permite desacoplar el contrato del servicio de su implementación, permitiendo así que el servicio pueda evolucionar sin afectar directamente a los consumidores. Para esto los contratos se definieron bajo el principio de contrato primero.
-
--	Data Model Transformation : La lógica de transformación de modelo de datos se puede introducir para llevar a cabo la conversión en tiempo de ejecución de datos, de modo que estos se ajusten a un modelo de datos, pueden ser reestructurados para cumplir a un modelo de datos diferente. Esto se extiende un marco de mensajería no estandarizada lo que le permite superar dinámicamente disparidad entre los esquemas utilizados por un contrato de servicio y los mensajes transmitidos a ese contrato.
-
--	Service Inventory : Un inventario de servicios es una colección de servicios complementarios estandarizados y gobernados de forma independiente dentro de un límite que representa una empresa o un segmento significativo de una empresa.
+*-	Service Inventory:* Un inventario de servicios es una colección de servicios complementarios estandarizados y gobernados de forma independiente dentro de un límite que representa una empresa o un segmento significativo de una empresa.
 
 ## DISEÑO DE LA ARQUITECTURA
 
@@ -55,13 +51,13 @@ La solución aquí presentada esta basada bajo el estilo arquitectural de micros
 
 **imagen**
 
--	Usuario: La solución permite que se exponga la funcionalidad del banco a clientes a través de plataformas web o móviles y que se pueda acceder a ella de forma trasparente e independiente del canal.
+*-Usuario:* La solución permite que se exponga la funcionalidad del banco a clientes a través de plataformas web o móviles y que se pueda acceder a ella de forma trasparente e independiente del canal.
 
--	API Gateway: La solución propuesta se compone de un api Gateway realizado con Apache Camel sobre sprint boot, que permite tener un único punto de acceso a la funcionalidad de consultar saldo y realizar pago.
+*-	API Gateway:* La solución propuesta se compone de un api Gateway realizado con Apache Camel sobre sprint boot, que permite tener un único punto de acceso a la funcionalidad de consultar saldo y realizar pago.
 
--	Orquestado de Servicios: Es el encargado de realizar la composición por coreografía de los servicios de enrutador y despachador, este se implementa en Apache Camel.
+*-	Orquestado de Servicios:* Es el encargado de realizar la composición por coreografía de los servicios de enrutador y despachador, este se implementa en Apache Camel.
 
--	Enrutador: Es el servicio encargado de identificar el convenio que se requiere para la realización de la transacción dado una referencia de pago, además de identificar el tipo de servicio (Rest o SOAP), devolver el end point del servicio legado y definir el tipo de transacción (Consulta Saldo o Pago). Además de permitir agregar, actualizar o eliminar nuevos convenios.
+*-	Enrutador:* Es el servicio encargado de identificar el convenio que se requiere para la realización de la transacción dado una referencia de pago, además de identificar el tipo de servicio (Rest o SOAP), devolver el end point del servicio legado y definir el tipo de transacción (Consulta Saldo o Pago). Además de permitir agregar, actualizar o eliminar nuevos convenios.
 
 -	Despachador: Encargado de realizar el consumo y gestionar la comunicación de mensajes con los servicios de los proveedores. Este servicio se apoya del servicio de traductor cuando es necesario para realizar la transformación de los mensajes.
 
