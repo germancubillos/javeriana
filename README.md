@@ -4,20 +4,15 @@ El siguiente proyecto pretende modelar e implementar una solución de arquitectu
 
 
 
-# Indice
-1. [Arquitectura utilizada](#CONTEXTO)
-2. [Patrones de Diseño](#ARQUITECTURA DE SOLUCIÓN)
+# INDICE
+1. [ContexTO](#CONTEXTO)
+2. [Arquitectura de Solución](#ARQUITECTURA_DE_SOLUCION)
 3. [Estilo y uso de Servicios](#estilo-y-uso-de-servicios)
 4. [Manejo de Contratos, esquemas y políticas](#Manejo-de-Contratos,-esquemas-y-políticas)
-5. [Ventajas](#ventajas)
-6. [Desventajas](#desventajas)
-7. [Implementación](#implementación)
-8. [Funcionamiento y virtualización con Docker](#funcionamiento-y-virtualización-con-Docker)
-9. [Conclusión](#conclusión)
-10. [Presentado](#presentado)
 
 
-# CONTEXTO
+
+## CONTEXTO
 
 El Banco ABC está realizando varios proyectos de actualización tecnológica los cuales le permiten ofrecer sus productos financieros de manera más ágil y de esta forma responder a nuevas necesidades del mercado. El Banco ABC quiere tener la posibilidad de adicionar nuevos convenios con otros proveedores de servicios de manera ágil, o incluso la posibilidad de terminar/eliminar los convenios existentes sin que esto represente indisponibilidad del servicio. Se llegó a un acuerdo de las capacidades/primitivas básicas que se deben soportar para cada convenio:
 
@@ -28,7 +23,7 @@ El Banco ABC está realizando varios proyectos de actualización tecnológica lo
 
 Principalmente el banco necesita un conjunto de servicios que representen sus necesidades internas de negocio, lo cual les permite desacoplar los servicios de los proveedores y así no depender de sus detalles.
 
-# ARQUITECTURA DE SOLUCIÓN
+## ARQUITECTURA DE SOLUCIÓN
 
 La solución aquí planteada está basada en la necesidad de permitir al negocio una mayor interoperabilidad y un desacoplamiento de la lógica de negocio con la integración de los servicios de los sistemas de proveedores, lo que permite adicionar, eliminar o actualizar convenios de manera ágil y de manera trasparente para no generar indisponibilidades en la prestación del servicio. 
 
