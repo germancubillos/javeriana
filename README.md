@@ -4,7 +4,7 @@ El siguiente proyecto pretende modelar e implementar una solución de arquitectu
 
 aww-board.png
 
-![imagen](https://github.com/germancubillos/javeriana/blob/master/aww-board.png)
+![imagen](https://github.com/germancubillos/javeriana/blob/master/EAES_MVA_Taller04_DS_Arquitectura.jpg)
 
 ## INDICE
 1. [Contexto](#CONTEXTO)
