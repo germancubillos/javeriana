@@ -1,10 +1,10 @@
 # EAES_Modelado y Validación de Arquitectura
-### Taller 4 - Banco ABC
+###### Taller 4 - Banco ABC por: Germán Cubillos, Fabián Burgos y Harry Sanchez.
 El siguiente proyecto pretende modelar e implementar una solución de arquitectura utilizando una aproximación orientada a servicios utilizando los principios de diseño de servicios, diseño de patrones y estrategias para la construcción de arquitectura orientada a microservicios.
 
 
 
-# INDICE
+## INDICE
 1. [Contexto](#CONTEXTO)
 2. [Arquitectura de Solución](#ARQUITECTURA-DE-SOLUCIÓN)
 3. [Estilo y uso de Servicios](#estilo-y-uso-de-servicios)
