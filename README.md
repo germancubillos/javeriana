@@ -5,9 +5,16 @@ El siguiente proyecto pretende modelar e implementar una solución de arquitectu
 
 
 # Indice
-1. [Contexto](#CONTEXTO)
-2. [Arquitectura de Solución](#ARQUITECTURA DE SOLUCIÓN)
-3. [PATRONES DE ARQUITECTURA](#PATRONES DE ARQUITECTURA)
+1. [Arquitectura utilizada](#CONTEXTO)
+2. [Patrones de Diseño](#ARQUITECTURA DE SOLUCIÓN)
+3. [Estilo y uso de Servicios](#estilo-y-uso-de-servicios)
+4. [Manejo de Contratos, esquemas y políticas](#Manejo-de-Contratos,-esquemas-y-políticas)
+5. [Ventajas](#ventajas)
+6. [Desventajas](#desventajas)
+7. [Implementación](#implementación)
+8. [Funcionamiento y virtualización con Docker](#funcionamiento-y-virtualización-con-Docker)
+9. [Conclusión](#conclusión)
+10. [Presentado](#presentado)
 
 
 # CONTEXTO
