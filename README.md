@@ -2,10 +2,6 @@
 ###### Taller 4 - Banco ABC por: Germán Cubillos, Fabián Burgos y Harry Sanchez.
 El siguiente proyecto pretende modelar e implementar una solución de arquitectura utilizando una aproximación orientada a servicios utilizando los principios de diseño de servicios, diseño de patrones y estrategias para la construcción de arquitectura orientada a microservicios.
 
-aww-board.png
-
-![imagen](https://github.com/germancubillos/javeriana/blob/master/EAES_MVA_Taller04_DS_Arquitectura.jpg)
-
 ## INDICE
 1. [Contexto](#CONTEXTO)
 2. [Arquitectura de Solución](#ARQUITECTURA-DE-SOLUCIÓN)
@@ -51,7 +47,7 @@ Los servicios se comunican entre sí a través de APIs bien definidas. A continu
 
 La solución aquí presentada esta basada bajo el estilo arquitectural de microservicios, se utilizaron los patrones anteriormente mencionados y esta diseñado para cumplir con las necesidades del negocio.
 
-**imagen**
+![imagen](https://github.com/germancubillos/javeriana/blob/master/EAES_MVA_Taller04_DS_Arquitectura.jpg)
 
 **-Usuario:** La solución permite que se exponga la funcionalidad del banco a clientes a través de plataformas web o móviles y que se pueda acceder a ella de forma trasparente e independiente del canal.
 
@@ -80,11 +76,11 @@ El diseño de la arquitectura que se propone para el banco ABC realiza el siguie
 
 12. El despachador da como respuesta a la petición del orquestador la referencia de pago y el valor a pagar, (13) el cual lo propaga al API Gateway quien realiza el envío al usuario final (14).
 
-**imagen**
+![imagen](https://github.com/germancubillos/javeriana/blob/master/EAES_MVA_Taller04_DS_Saldo.jpg)
 
 A continuación, se define el flujo del proceso de pago el cual es exactamente igual al flujo de consulta el cambio radica en (3) el enrutador quien es el encargado según su lógica implementada de definir la operación de la transacción que ente caso es la de pagar y (9) una vez recibe el mensaje de parte del legado con el estado de la transacción esta se propaga hasta el usuario final.
 
-**imagen**
+![imagen](https://github.com/germancubillos/javeriana/blob/master/EAES_MVA_Taller04_DS_Pago.jpg)
 
 FUERZAS DE LA SOLUCIÓN
 
