@@ -1,19 +1,10 @@
 # EAES_Modelado y Validación de Arqitectura
+### Taller 4 - Banco ABC
 
 El siguiente proyecto pretende modelar e implementar una solución de arquitectura utilizando una aproximación orientada a servicios utilizando los principios de diseño de servicios, diseño de patrones y estrategias para la construcción de arquitectura orientada a microservicios.
 
 ## Indice
 1. [Contexto](#Contexto )
-2. [Patrones de Diseño](#patrones-de-diseño)
-3. [Estilo y uso de Servicios](#estilo-y-uso-de-servicios)
-4. [Manejo de Contratos, esquemas y políticas](#Manejo-de-Contratos,-esquemas-y-políticas)
-5. [Ventajas](#ventajas)
-6. [Desventajas](#desventajas)
-7. [Implementación](#implementación)
-8. [Funcionamiento y virtualización con Docker](#funcionamiento-y-virtualización-con-Docker)
-9. [Conclusión](#conclusión)
-10. [Presentado](#presentado)
-
 
 
 # Contexto 
