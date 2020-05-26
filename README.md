@@ -5,10 +5,10 @@ El siguiente proyecto pretende modelar e implementar una solución de arquitectu
 ## INDICE
 1. [Contexto](#CONTEXTO)
 2. [Arquitectura de Solución](#ARQUITECTURA-DE-SOLUCIÓN)
-3. [Estilo y uso de Servicios](#estilo-y-uso-de-servicios)
-4. [Manejo de Contratos, esquemas y políticas](#Manejo-de-Contratos,-esquemas-y-políticas)
-
-
+3. [Patrones de Arquitectura](#PATRONES-DE-ARQUITECTURA)
+4. [Diseño de la Arquitectura](#DISEÑO-DE-LA-ARQUITECTURA)
+5. [Fuerzas de la Solución](#FUERZAS-DE-LA-SOLUCIÓN)
+6. [Consecuencias de la Solución](#CONSECUENCIAS-DE-LA-SOLUCIÓN )
 
 ## CONTEXTO
 
@@ -82,7 +82,7 @@ A continuación, se define el flujo del proceso de pago el cual es exactamente i
 
 ![imagen](https://github.com/germancubillos/javeriana/blob/master/EAES_MVA_Taller04_DS_Pago.jpg)
 
-FUERZAS DE LA SOLUCIÓN
+## FUERZAS DE LA SOLUCIÓN
 
 A continuación, se describen los requerimientos y restricciones que están relacionadas y que pueden afectar la correcta implementación del sistema de pago de servicios y como el patrón nuclear y complementario ayudan a soportar estas necesidades:
 -	La gestión de roles y sus funciones específicas es un desafío que se requiere cumplir para la operación correcta de la aplicación, para esto el patrón nuclear de un sistema por microservicios permite la gestión de los roles y el dominio de sus responsabilidades para la operación correcta del proceso.
